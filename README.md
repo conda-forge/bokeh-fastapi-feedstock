@@ -28,6 +28,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-bokeh--fastapi-green.svg)](https://anaconda.org/conda-forge/bokeh-fastapi) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/bokeh-fastapi.svg)](https://anaconda.org/conda-forge/bokeh-fastapi) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/bokeh-fastapi.svg)](https://anaconda.org/conda-forge/bokeh-fastapi) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/bokeh-fastapi.svg)](https://anaconda.org/conda-forge/bokeh-fastapi) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-bokeh_fastapi-green.svg)](https://anaconda.org/conda-forge/bokeh_fastapi) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/bokeh_fastapi.svg)](https://anaconda.org/conda-forge/bokeh_fastapi) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/bokeh_fastapi.svg)](https://anaconda.org/conda-forge/bokeh_fastapi) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/bokeh_fastapi.svg)](https://anaconda.org/conda-forge/bokeh_fastapi) |
 
 Installing bokeh-fastapi
 ========================
@@ -39,16 +40,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `bokeh-fastapi` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `bokeh-fastapi, bokeh_fastapi` can be installed with `conda`:
 
 ```
-conda install bokeh-fastapi
+conda install bokeh-fastapi bokeh_fastapi
 ```
 
 or with `mamba`:
 
 ```
-mamba install bokeh-fastapi
+mamba install bokeh-fastapi bokeh_fastapi
 ```
 
 It is possible to list all of the versions of `bokeh-fastapi` available on your platform with `conda`:

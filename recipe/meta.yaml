@@ -10,29 +10,43 @@ source:
   sha256: f01f035f9c275d416a83d9c7f1aa06d9c76b47e565b0d8795d1902f01977d57f
 
 build:
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
-requirements:
-  host:
-    - python >=3.10
-    - setuptools >=64
-    - setuptools-scm >=8
-    - pip
-  run:
-    - python >=3.10
-    - fastapi >=0.68.0
-    - starlette
-    - bokeh >=2.3.3
+outputs:
+  - name: {{ name }}
+    build:
+      script: python -m pip install . -vv --no-deps
+      noarch: python
+    requirements:
+      host:
+        - python >=3.10
+        - setuptools >=64
+        - setuptools-scm >=8
+        - pip
+      run:
+        - python >=3.10
+        - fastapi >=0.68.0
+        - starlette
+        - bokeh >=2.3.3
+    test:
+      imports:
+      - bokeh_fastapi
+      commands:
+      - pip check
+      requires:
+      - pip
 
-test:
-  imports:
-    - bokeh_fastapi
-  commands:
-    - pip check
-  requires:
-    - pip
+  # So we can run conda install bokeh_fastapi
+  - name: bokeh_fastapi
+    build:
+      noarch: python
+    requirements:
+      run:
+        - {{ pin_subpackage(name, exact=True) }}
+    test:
+      imports:
+        - bokeh_fastapi
+
 
 about:
   home: https://github.com/bokeh/bokeh-fastapi
