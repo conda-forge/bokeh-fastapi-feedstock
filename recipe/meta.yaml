@@ -1,5 +1,5 @@
 {% set name = "bokeh-fastapi" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bokeh_fastapi-{{ version }}.tar.gz
-  sha256: 8375d3d9971c8fdedbd8aa13bdc37878e04c8cb653a51919c2dad069a94f7d91
+  sha256: 45504b212d6af5bc6edf56e7b267d184f2e4c11ff457a78f244a4d5e09ba1a51
 
 build:
-  number: 1
+  number: 0
 
 outputs:
   - name: {{ name }}
@@ -25,16 +25,17 @@ outputs:
         - pip
       run:
         - python >=3.10
+        - bokeh >=2.3.3
         - fastapi >=0.68.0
         - starlette
-        - bokeh >=2.3.3
+        - websockets>=10.4
     test:
       imports:
-      - bokeh_fastapi
+        - bokeh_fastapi
       commands:
-      - pip check
+        - pip check
       requires:
-      - pip
+        - pip
 
   # So we can run conda install bokeh_fastapi
   - name: bokeh_fastapi
