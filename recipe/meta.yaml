@@ -25,9 +25,10 @@ outputs:
         - pip
       run:
         - python >=3.10
+        - bokeh >=2.3.3
         - fastapi >=0.68.0
         - starlette
-        - bokeh >=2.3.3
+        - websockets>=10.4
     test:
       imports:
         - bokeh_fastapi
