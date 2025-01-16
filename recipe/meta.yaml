@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "bokeh-fastapi" %}
 {% set version = "0.1.3" %}
 
@@ -10,7 +11,7 @@ source:
   sha256: 45504b212d6af5bc6edf56e7b267d184f2e4c11ff457a78f244a4d5e09ba1a51
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: {{ name }}
@@ -19,12 +20,12 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.10
+        - python {{ python_min }}
         - setuptools >=64
         - setuptools-scm >=8
         - pip
       run:
-        - python >=3.10
+        - python >={{ python_min }}
         - bokeh >=2.3.3
         - fastapi >=0.68.0
         - starlette
@@ -45,6 +46,8 @@ outputs:
       run:
         - {{ pin_subpackage(name, exact=True) }}
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - bokeh_fastapi
 
