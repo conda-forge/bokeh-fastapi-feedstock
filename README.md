@@ -28,7 +28,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-bokeh--fastapi-green.svg)](https://anaconda.org/conda-forge/bokeh-fastapi) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/bokeh-fastapi.svg)](https://anaconda.org/conda-forge/bokeh-fastapi) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/bokeh-fastapi.svg)](https://anaconda.org/conda-forge/bokeh-fastapi) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/bokeh-fastapi.svg)](https://anaconda.org/conda-forge/bokeh-fastapi) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-bokeh_fastapi-green.svg)](https://anaconda.org/conda-forge/bokeh_fastapi) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/bokeh_fastapi.svg)](https://anaconda.org/conda-forge/bokeh_fastapi) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/bokeh_fastapi.svg)](https://anaconda.org/conda-forge/bokeh_fastapi) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/bokeh_fastapi.svg)](https://anaconda.org/conda-forge/bokeh_fastapi) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-bokeh__fastapi-green.svg)](https://anaconda.org/conda-forge/bokeh_fastapi) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/bokeh_fastapi.svg)](https://anaconda.org/conda-forge/bokeh_fastapi) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/bokeh_fastapi.svg)](https://anaconda.org/conda-forge/bokeh_fastapi) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/bokeh_fastapi.svg)](https://anaconda.org/conda-forge/bokeh_fastapi) |
 
 Installing bokeh-fastapi
 ========================
