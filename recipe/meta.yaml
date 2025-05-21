@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "bokeh-fastapi" %}
 {% set version = "0.1.4" %}
 {% set python_min = "3.10" %}
@@ -48,6 +49,8 @@ outputs:
         - python >={{ python_min }}
         - {{ pin_subpackage(name, exact=True) }}
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - bokeh_fastapi
       requires:
