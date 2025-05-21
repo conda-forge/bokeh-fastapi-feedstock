@@ -1,5 +1,6 @@
 {% set name = "bokeh-fastapi" %}
 {% set version = "0.1.4" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -19,22 +20,23 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.10
+        - python {{ python_min }}
         - setuptools >=64
         - setuptools-scm >=8
         - pip
       run:
-        - python >=3.10
+        - python >={{ python_min }}
         - bokeh >=2.3.3
         - fastapi >=0.68.0
         - starlette
-        - websockets>=10.4
+        - websockets >=10.4
     test:
       imports:
         - bokeh_fastapi
       commands:
         - pip check
       requires:
+        - python {{ python_min }}
         - pip
 
   # So we can run conda install bokeh_fastapi
@@ -43,10 +45,14 @@ outputs:
       noarch: python
     requirements:
       run:
+        - python >={{ python_min }}
         - {{ pin_subpackage(name, exact=True) }}
     test:
       imports:
         - bokeh_fastapi
+      requires:
+        - python {{ python_min }}
+        - pip
 
 
 about:
