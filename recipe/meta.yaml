@@ -10,7 +10,7 @@ source:
   sha256: c2aeab4baf735839e744fb22ce9856c258e186919447e546dba59af628eb603c
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: {{ name }}
@@ -59,3 +59,4 @@ extra:
   recipe-maintainers:
     - pmeier
     - philippjfr
+    - hoxbro
