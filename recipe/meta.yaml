@@ -9,9 +9,11 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bokeh_fastapi-{{ version }}.tar.gz
   sha256: 3936d174a14a7555fda5173e7ee2f036639ac2391b4e048d824408923646be7f
+  patches:
+    - 000-bokeh-390.patch
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: {{ name }}
