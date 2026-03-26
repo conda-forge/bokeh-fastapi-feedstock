@@ -28,6 +28,7 @@ outputs:
         - python >={{ python_min }}
         - bokeh >=2.3.3
         - fastapi >=0.68.0
+        - packaging
         - starlette
         - websockets >=10.4
     test:
