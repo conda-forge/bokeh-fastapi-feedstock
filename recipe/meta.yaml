@@ -1,5 +1,5 @@
 {% set name = "bokeh-fastapi" %}
-{% set version = "0.1.6" %}
+{% set version = "0.1.7" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bokeh_fastapi-{{ version }}.tar.gz
-  sha256: d093a694b4732bf2095f1edd09304cd5d7f91a76fab6ca3d98cda265f40676e6
+  sha256: f6d4ffb272f766de2dbe2ab25b17f8eaaa79f0da555bf1128ee698c4d690739b
 
 build:
   number: 0
